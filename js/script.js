@@ -1,17 +1,17 @@
-/**
- * @author Rahul Jangir <'aarjayjangir@gmail.com'>
- */
-(function ($) {
-    "use strict";
-    $('.sakura-falling').sakura();
-})(jQuery);
-
-
+// Immediately try to play the audio
 var myaudio = document.getElementById("my_audio");
-$(document).on('click', function () {
-    myaudio.play();
-    console.log('Shaadi me zaroor aana');
+
+// Try playing on load
+myaudio.play().catch(function () {
+    console.log("Autoplay blocked. Waiting for user interaction.");
 });
+
+// Fallback: Play audio on first user interaction (click)
+document.addEventListener('click', function () {
+    myaudio.play();
+    console.log("Shaadi me zaroor aana");
+}, { once: true }); // { once: true } ensures it only triggers once
+
 
 
 // Set the date we're counting down to
@@ -59,16 +59,16 @@ const sr = ScrollReveal({
 
 
 // sr.reveal(`.rahul`,{ delay: 300, origin: 'top' })
-sr.reveal(`.rahul`, { origin: 'left', delay: 700 })
-sr.reveal(`.pranjal`, { origin: 'right', delay: 700 })
-sr.reveal(`.gif,.home_txt`, { delay: 1300, origin: 'top' })
-sr.reveal(`.top-right-decoration,.top-left-decoration`, { origin: 'left', delay: 2200 })
-sr.reveal(`.responsive-table__row`, { interval: 200 })
+sr.reveal(`.ganeshjiimg`, { origin: 'left', delay: 500 })
+sr.reveal(`.pranjal`, { origin: 'right', delay: 500 })
+sr.reveal(`.gif,.home_txt`, { delay: 1100, origin: 'top' })
+sr.reveal(`.top-right-decoration,.top-left-decoration`, { origin: 'left', delay: 1900 })
+sr.reveal(`.responsive-table__row`, { interval: 100 })
 sr.reveal(`.table_container`, { delay: 100, origin: 'top' })
-sr.reveal(`.happiness,.hindi_text`, { delay: 400, origin: 'bottom' })
-sr.reveal(`.social__links`, { delay: 1000, origin: 'bottom', interval: 200 })
-sr.reveal(`.newsletter__description,.home__bottom`, { origin: 'left', delay: 400 })
-sr.reveal(`.newsletter__form,.CTA`, { origin: 'right', delay: 400 })
+sr.reveal(`.happiness,.hindi_text`, { delay: 200, origin: 'bottom' })
+sr.reveal(`.social__links`, { delay: 800, origin: 'bottom', interval: 200 })
+sr.reveal(`.newsletter__description,.home__bottom`, { origin: 'left', delay: 300 })
+sr.reveal(`.newsletter__form,.CTA`, { origin: 'right', delay: 300 })
 
 
 
