@@ -34,6 +34,8 @@ input {
 	outline: none;
 }
 
+
+
   /**----------------------------------------------
  *                SCROLL BAR
  *---------------------------------------------**/
@@ -569,14 +571,14 @@ img {
 
 .title p {
 	color: var(--primary-color);
-	margin: 30px 0 20px;
+	margin: 20px 0 15px;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	font-size: 16px;
 }
 
 .wrap {
-	height: 100vh;
+	height: max-content;
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-wrap: wrap;
@@ -607,11 +609,29 @@ img {
 }
 
 
+.ganeshjiimg img{
+	max-width: 150px;
+    height: auto;
+	border-radius: 50%;
+}
 
-.title,
+
+.paramPita{
+	color: aliceblue !important;
+	font-family: 'Dancing Script', cursive;
+	/* font-weight: bold; */
+	font-style: normal;
+    margin: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+
+/* .title,
 .functions {
 	margin-bottom: 3.5rem;
-}
+} */
 
 #time {
 	width: auto;
